@@ -1,0 +1,19 @@
+---
+title: "Developing Data Products Week 2 Assigment"
+date: "January 9, 2019"
+output: html_document
+---
+
+### Let's create a map that shows the location of President Rodrigo Duterte's Residence
+
+```{r, cache = T}
+library(leaflet)
+
+my_map <- leaflet() %>%
+  addTiles()
+
+my_map <- my_map %>%
+  addMarkers(lat=7.054146, lng=125.5836811,
+             popup="President Rodrigo Duterte's Residence")
+my_map
+```
